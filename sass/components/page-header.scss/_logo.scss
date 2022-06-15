@@ -1,0 +1,9 @@
+.logo {
+  margin-right: 93px;
+
+  @extend %logo;
+
+  &__header {
+    color: #000000;
+  }
+}

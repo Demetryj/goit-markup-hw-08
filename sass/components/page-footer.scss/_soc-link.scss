@@ -1,0 +1,38 @@
+.footer__box-link {
+  margin-right: 93px;
+}
+
+.footer__title-link {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $wite-text-color;
+}
+
+.soc-link {
+  display: flex;
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__link {
+    @include social-links($wite-text-color);
+
+    flex-basis: calc((100% - 30px) / 4);
+
+    background-color: rgba(255, 255, 255, 0.1);
+
+    @include transition(background-color);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    background-color: $accent-color;
+  }
+}

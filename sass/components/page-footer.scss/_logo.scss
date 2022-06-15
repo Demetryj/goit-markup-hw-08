@@ -1,0 +1,10 @@
+.logo-footer {
+  @extend %logo;
+
+  display: block;
+  margin-bottom: 20px;
+
+  &__color {
+    color: $wite-text-color;
+  }
+}

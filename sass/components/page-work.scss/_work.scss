@@ -1,0 +1,7 @@
+.work {
+  padding-top: 94px;
+}
+
+.work__title {
+  @extend %visually-hidden;
+}

@@ -1,0 +1,13 @@
+.button-submit {
+  @extend %button;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  @include transition(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+}

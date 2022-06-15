@@ -1,0 +1,24 @@
+.social-link {
+  display: flex;
+  justify-content: center;
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__link {
+    @include social-links($icon-color);
+
+    @include transition(background-color);
+  }
+
+  &__icon {
+    @include transition(fill);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    background-color: $accent-color;
+    fill: $wite-text-color;
+  }
+}
