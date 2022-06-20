@@ -16,8 +16,18 @@
     <!--Шапка-->
     <header class="header">
       <div class="container header__container">
-        <nav class="navigation">
+        
           <a href="./index.html" class="logo">Web<span class="logo__header">Studio</span></a>
+
+          <button  type="button"  class="button-menu" aria-expanded="false" data-menu-button>
+            <svg class="buttun-menu__icon"  width="40" height="40" aria-label="Кнопка мобильного меню">
+              <use class="button-menu__close" href="./images/icon-svg/symbol-defs.svg#btn-menu-icon-close"></use>
+              <use class="button-menu__menu" href="./images/icon-svg/symbol-defs.svg#btn-menu-icon"></use>
+            </svg>
+          </button>
+
+          <div class="menu-container" data-menu>
+            <nav class="navigation">
           <ul class="nav">
             <li class="nav__item">
               <a href="./index.html" class="nav__link nav__link--accent">Студия</a>
@@ -35,8 +45,8 @@
 
         <ul class="feedback">
           <li class="feedback__item">
-            <a href="mailto:info@devstudio.com" class="feedback__link">
-              <svg class="feedback__icon" width="16" height="12">
+            <a href="mailto:info@devstudio.com" class="feedback__link feedback__link--mail">
+              <svg class="feedback__icon feedback__icon--mail" width="16" height="12">
                 <use href="./images/icon-svg/symbol-defs.svg#link-envelope"></use>
               </svg>
               info@devstudio.com</a
@@ -44,14 +54,34 @@
           </li>
 
           <li class="feedback__item">
-            <a href="tel:+380961111111" class="feedback__link">
-              <svg class="feedback__icon" width="10" height="16">
+            <a href="tel:+380961111111" class="feedback__link feedback__link--tel">
+              <svg class="feedback__icon feedback__icon--tel" width="10" height="16">
                 <use href="./images/icon-svg/symbol-defs.svg#link-smartphone"></use>
               </svg>
               +38 096 111 11 11</a
             >
           </li>
         </ul>
+
+        <ul class="social-web">
+          <li class="social-web__item">
+            <a href="" class="social-web__link">Instagram</a>
+          </li>
+          
+          <li class="social-web__item">
+            <a href="" class="social-web__link">Twitter</a>
+          </li>
+          
+          <li class="social-web__item">
+            <a href="" class="social-web__link">Facebook</a
+              ></li>
+              
+          <li class="social-web__item">
+            <a href="" class="social-web__link">LinkedIn</a>
+          </li>
+        </ul>
+        
+        </div>
       </div>
     </header>
 
@@ -70,7 +100,7 @@
       <section class="work">
         <div class="container">
           <!--Несуществующее название секции-->
-          <h2 class="work__title">Подход к работе</h2>
+          <!-- <h2 class="work__title">Подход к работе</h2>
 
           <ul class="examples">
             <li class="examples__item">
@@ -119,10 +149,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <!--Секция 3-->
-      <section class="technology">
+      <!-- <section class="technology">
         <div class="container">
           <h2 class="technology__title">Чем мы занимаемся</h2>
 
@@ -161,10 +191,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <!--Секция 4-->
-      <section class="team">
+      <!-- <section class="team">
         <div class="container">
           <h2 class="team__title">Наша команда</h2>
 
@@ -366,10 +396,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <!-- Секція 5 -->
-      <section class="clients">
+      <!-- <section class="clients">
         <div class="container">
           <h2 class="clients__title">Постоянные клиенты</h2>
 
@@ -424,10 +454,10 @@
           </ul>
         </div>
       </section>
-    </main>
+    </main> -->
 
     <!--Подвал-->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container footer__container">
         <div class="footer__box">
           <a href="./index.html" class="logo-footer"
@@ -516,10 +546,10 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
     <!-- Модальне вікно -->
-    <div class="backdrop is-hidden" data-modal>
+    <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal__button" type="button" data-modal-close>
           <svg class="modal__icon" width="11" height="11">
@@ -580,8 +610,9 @@
           <button class="button-submit" type="submit">Отправить</button>
         </form>
       </div>
-    </div>
+    </div> -->
 
     <script src="./js/modal.js"></script>
+     <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

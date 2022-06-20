@@ -1,18 +1,34 @@
 .nav {
-  display: flex;
-  align-items: center;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 302px;
+  }
 
   &__item:not(:last-child) {
-    margin-right: 50px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 32px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    margin-right: 84px;
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 302px;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 50px;
+    }
   }
 }
 
 .nav__link {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 40px;
+  line-height: 1.18;
   letter-spacing: 0.02em;
-  text-decoration: none;
 
   color: $primary-font-color;
 
@@ -23,24 +39,35 @@
     color: $accent-color;
   }
 
-  &--accent {
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+
+.nav__link--accent {
+  color: $accent-color;
+
+  @media screen and (min-width: 768px) {
     position: relative;
 
-    color: $accent-color;
-  }
+    &::after {
+      content: '';
 
-  &--accent::after {
-    content: '';
+      position: absolute;
+      left: 0;
+      top: 46px;
 
-    position: absolute;
-    left: 0;
-    top: 46px;
+      display: block;
+      width: 100%;
+      height: 4px;
 
-    display: block;
-    width: 100%;
-    height: 4px;
+      background-color: $accent-color;
+      border-radius: 2px;
 
-    background-color: $accent-color;
-    border-radius: 2px;
+      @media screen and (min-width: 1200px) {
+        top: 45px;
+      }
+    }
   }
 }
