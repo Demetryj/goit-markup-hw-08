@@ -1,34 +1,84 @@
 .hero {
-  max-width: 1600px;
-  height: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+
+  max-width: 480px;
+  height: 400px;
+
   margin-left: auto;
   margin-right: auto;
 
   background-color: #2f303a;
 
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('../images/background-image.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+    url('../images/bg-images/bg-image-mobile.jpg');
 
-  &__title {
+  background-size: 480px 400px;
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url('../images/bg-images/bg-image-mobile@2x.jpg');
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/bg-images/bg-image-tablet.jpg');
+
+    background-size: 768px;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('../images/bg-images/bg-image-tablet@2x.jpg');
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    max-width: 1600px;
+    height: 600px;
+
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/bg-images/bg-image-laptop.jpg');
+
+    background-size: 1600px 600px;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('../images/bg-images/bg-image-laptop@2x.jpg');
+    }
+  }
+}
+
+// max-width: 1600px;
+// height: auto;
+// padding-top: 200px;
+// padding-bottom: 200px;
+// margin-left: auto;
+// margin-right: auto;
+
+.hero__title {
+  max-width: 360px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: $wite-text-color;
+
+  @media screen and (min-width: 1200px) {
     max-width: 696px;
     margin-top: 0;
-    margin-bottom: 40px;
-    margin-left: auto;
-    margin-right: auto;
 
-    font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-
-    color: $wite-text-color;
   }
 }
 
