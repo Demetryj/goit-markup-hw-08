@@ -18,11 +18,16 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+}
+
 body {
   font-family: Roboto, sans-serif;
   color: $primary-font-color;
   background-color: #ffffff;
 }
+
 .container {
   max-width: 320px;
   padding-left: 15px;

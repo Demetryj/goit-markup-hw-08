@@ -16,71 +16,75 @@
     <!--Шапка-->
     <header class="header">
       <div class="container header__container">
-        
-          <a href="./index.html" class="logo">Web<span class="logo__header">Studio</span></a>
+        <a href="./index.html" class="logo">Web<span class="logo__header">Studio</span></a>
 
-          <button  type="button"  class="button-menu" aria-expanded="false" data-menu-button>
-            <svg class="buttun-menu__icon"  width="40" height="40" aria-label="Кнопка мобильного меню">
-              <use class="button-menu__close" href="./images/icon-svg/symbol-defs.svg#btn-menu-icon-close"></use>
-              <use class="button-menu__menu" href="./images/icon-svg/symbol-defs.svg#btn-menu-icon"></use>
-            </svg>
-          </button>
+        <button type="button" class="button-menu" aria-expanded="false" data-menu-button>
+          <svg class="buttun-menu__icon" width="40" height="40" aria-label="Кнопка мобильного меню">
+            <use
+              class="button-menu__close"
+              href="./images/icon-svg/symbol-defs.svg#btn-menu-icon-close"
+            ></use>
+            <use
+              class="button-menu__menu"
+              href="./images/icon-svg/symbol-defs.svg#btn-menu-icon"
+            ></use>
+          </svg>
+        </button>
 
-          <div class="menu-container" data-menu>
-            <nav class="navigation">
-          <ul class="nav">
-            <li class="nav__item">
-              <a href="./index.html" class="nav__link nav__link--accent">Студия</a>
+        <div class="menu-container" data-menu>
+          <nav class="navigation">
+            <ul class="nav">
+              <li class="nav__item">
+                <a href="./index.html" class="nav__link nav__link--accent">Студия</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="./portfolio.html" class="nav__link">Портфолио</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="" class="nav__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="feedback">
+            <li class="feedback__item">
+              <a href="mailto:info@devstudio.com" class="feedback__link feedback__link--mail">
+                <svg class="feedback__icon feedback__icon--mail" width="16" height="12">
+                  <use href="./images/icon-svg/symbol-defs.svg#link-envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
             </li>
 
-            <li class="nav__item">
-              <a href="./portfolio.html" class="nav__link">Портфолио</a>
-            </li>
-
-            <li class="nav__item">
-              <a href="" class="nav__link">Контакты</a>
+            <li class="feedback__item">
+              <a href="tel:+380961111111" class="feedback__link feedback__link--tel">
+                <svg class="feedback__icon feedback__icon--tel" width="10" height="16">
+                  <use href="./images/icon-svg/symbol-defs.svg#link-smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
 
-        <ul class="feedback">
-          <li class="feedback__item">
-            <a href="mailto:info@devstudio.com" class="feedback__link feedback__link--mail">
-              <svg class="feedback__icon feedback__icon--mail" width="16" height="12">
-                <use href="./images/icon-svg/symbol-defs.svg#link-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
+          <ul class="social-web">
+            <li class="social-web__item">
+              <a href="" class="social-web__link">Instagram</a>
+            </li>
 
-          <li class="feedback__item">
-            <a href="tel:+380961111111" class="feedback__link feedback__link--tel">
-              <svg class="feedback__icon feedback__icon--tel" width="10" height="16">
-                <use href="./images/icon-svg/symbol-defs.svg#link-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+            <li class="social-web__item">
+              <a href="" class="social-web__link">Twitter</a>
+            </li>
 
-        <ul class="social-web">
-          <li class="social-web__item">
-            <a href="" class="social-web__link">Instagram</a>
-          </li>
-          
-          <li class="social-web__item">
-            <a href="" class="social-web__link">Twitter</a>
-          </li>
-          
-          <li class="social-web__item">
-            <a href="" class="social-web__link">Facebook</a
-              ></li>
-              
-          <li class="social-web__item">
-            <a href="" class="social-web__link">LinkedIn</a>
-          </li>
-        </ul>
-        
+            <li class="social-web__item">
+              <a href="" class="social-web__link">Facebook</a>
+            </li>
+
+            <li class="social-web__item">
+              <a href="" class="social-web__link">LinkedIn</a>
+            </li>
+          </ul>
         </div>
       </div>
     </header>
@@ -152,7 +156,7 @@
       </section>
 
       <!--Секция 3-->
-      <!-- <section class="technology">
+      <section class="technology">
         <div class="container">
           <h2 class="technology__title">Чем мы занимаемся</h2>
 
@@ -160,56 +164,108 @@
             <li class="technology__product">
               <img
                 class="technology__card"
-                src="./images/studio/section3-image1.jpg"
+                srcset="
+                  ./images/studio/section3/image1.jpg    1x,
+                  ./images/studio/section3/image1@2x.jpg 2x
+                "
+                src="./images/studio/section3/image1.jpg"
                 alt="Программист набирает код, 
                     который отображается наэкране монитора"
                 width="370"
                 height="294"
               />
+              <div class="technology__box">
+                <p class="technologi__text">Десктопные приложения</p>
+              </div>
             </li>
 
             <li class="technology__product">
               <img
                 class="technology__card"
-                src="./images/studio/section3-image2.jpg"
+                srcset="
+                  ./images/studio/section3/image2.jpg    1x,
+                  ./images/studio/section3/image2@2x.jpg 2x
+                "
+                src="./images/studio/section3/image2.jpg"
                 alt="На экране монитора
                     изображены три экрана смартфонов"
                 width="370"
                 height="294"
               />
+              <div class="technology__box">
+                <p class="technologi__text">Мобильные приложения</p>
+              </div>
             </li>
 
             <li class="technology__product">
               <img
                 class="technology__card"
-                src="./images/studio/section3-image3.jpg"
+                srcset="
+                  ./images/studio/section3/image3.jpg    1x,
+                  ./images/studio/section3/image3@2x.jpg 2x
+                "
+                src="./images/studio/section3/image3.jpg"
                 alt="На экране планшета изображена
                      политра цветов"
                 width="370"
                 height="294"
               />
+              <div class="technology__box">
+                <p class="technologi__text">Дизайнерские решения</p>
+              </div>
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!--Секция 4-->
-      <!-- <section class="team">
+      <section class="team">
         <div class="container">
           <h2 class="team__title">Наша команда</h2>
 
           <ul class="specialist">
             <li class="specialist__item">
-              <img
-                class="specialist__card"
-                src="./images/studio/section4-Igor_D.jpg"
-                alt="Улыбающийся молодой человек с чёрной бородкой
+              <picture>
+                <source
+                  srcset="
+                    ../images/studio/section4/mobile-Igor_D-450.jpg 1x,
+                    ../images/studio/section4/mobile-Igor_D-900.jpg 2x
+                  "
+                  media="(max-width: 480px)"
+                  sizes="450px"
+                  type="image/jpeg"
+                />
+
+                <source
+                  srcset="
+                    ../images/studio/section4/tablet-Igor_D-354.jpg 1x,
+                    ../images/studio/section4/tablet-Igor_D-708.jpg 2x
+                  "
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  sizes="354px"
+                  type="image/jpeg"
+                />
+
+                <source
+                  srcset="
+                    ../images/studio/section4/laptop-Igor_D-270.jpg 1x,
+                    ../images/studio/section4/laptop-Igor_D-540.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="270"
+                  type="image/jpeg"
+                />
+
+                <img
+                  class="specialist__card"
+                  src="../images/studio/section4/mobile-Igor_D-450.jpg"
+                  alt="Улыбающийся молодой человек с чёрной бородкой
                     в очках, в коричневой рубашке"
-                width="270"
-                height="260"
-              />
+                />
+              </picture>
+
               <div class="specialist__info">
-                <h3 class="specialist__name">Демьяненко</h3>
+                <h3 class="specialist__name">Игорь Демьяненко</h3>
                 <p lang="en" class="specialist__profession">Product Designer</p>
 
                 <ul class="social-link">
@@ -249,14 +305,45 @@
             </li>
 
             <li class="specialist__item">
-              <img
-                class="specialist__card"
-                src="./images/studio/section4-Olga_R.jpg"
-                alt="Улыбающаяся девушка в очках, 
+              <picture>
+                <source
+                  srcset="
+                    ../images/studio/section4/mobile-Olga_R.jpg    1x,
+                    ../images/studio/section4/mobile-Olga_R@2x.jpg 2x
+                  "
+                  media="(max-width: 480px)"
+                  sizes="450px"
+                  type="image/jpeg"
+                />
+
+                <source
+                  srcset="
+                    ../images/studio/section4/tablet-Olga_R.jpg    1x,
+                    ../images/studio/section4/tablet-Olga_R@2x.jpg 2x
+                  "
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  sizes="354px"
+                  type="image/jpeg"
+                />
+
+                <source
+                  srcset="
+                    ../images/studio/section4/laptop-Olga_R.jpg    1x,
+                    ../images/studio/section4/laptop-Olga_R@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="270"
+                  type="image/jpeg"
+                />
+
+                <img
+                  class="specialist__card"
+                  src="../images/studio/section4/mobile-Olga_R.jpg"
+                  alt="Улыбающаяся девушка в очках, 
                     в черном пиджаке"
-                width="270"
-                height="260"
-              />
+                />
+              </picture>
+
               <div class="specialist__info">
                 <h3 class="specialist__name">Ольга Репина</h3>
                 <p lang="en" class="specialist__profession">Frontend Developer</p>
@@ -298,14 +385,45 @@
             </li>
 
             <li class="specialist__item">
-              <img
-                class="specialist__card"
-                src="./images/studio/section4-Nikolay_T.jpg"
-                alt="Улыбающийся молодой челвек
+              <picture>
+                <source
+                  srcset="
+                    ../images/studio/section4/mobile-Nikolay_T.jpg    1x,
+                    ../images/studio/section4/mobile-Nikolay_T@2x.jpg 2x
+                  "
+                  media="(max-width: 480px)"
+                  sizes="450px"
+                  type="image/jpeg"
+                />
+
+                <source
+                  srcset="
+                    ../images/studio/section4/tablet-Nikolay_T.jpg    1x,
+                    ../images/studio/section4/tablet-Nikolay_T@2x.jpg 2x
+                  "
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  sizes="354px"
+                  type="image/jpeg"
+                />
+
+                <source
+                  srcset="
+                    ../images/studio/section4/laptop-Nikolay_T.jpg    1x,
+                    ../images/studio/section4/laptop-Nikolay_T@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="270"
+                  type="image/jpeg"
+                />
+
+                <img
+                  class="specialist__card"
+                  src="../images/studio/section4/mobile-Nikolay_T.jpg"
+                  alt="Улыбающийся молодой челвек
                      в светло-голубой рубашке"
-                width="270"
-                height="260"
-              />
+                />
+              </picture>
+
               <div class="specialist__info">
                 <h3 class="specialist__name">Николай Тарасов</h3>
                 <p lang="en" class="specialist__profession">Marketing</p>
@@ -347,14 +465,45 @@
             </li>
 
             <li class="specialist__item">
-              <img
-                class="specialist__card"
-                src="./images/studio/section4_Mikhail_E.jpg"
-                alt="Улыбающийся молодой человек с черной бородкой,
+              <picture>
+                <source
+                  srcset="
+                    ../images/studio/section4/mobile-Mikhail_E.jpg    1x,
+                    ../images/studio/section4/mobile-Mikhail_E@2x.jpg 2x
+                  "
+                  media="(max-width: 480px)"
+                  sizes="450px"
+                  type="image/jpeg"
+                />
+
+                <source
+                  srcset="
+                    ../images/studio/section4/tablet-Mikhail_E.jpg    1x,
+                    ../images/studio/section4/tablet-Mikhail_E@2x.jpg 2x
+                  "
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  sizes="354px"
+                  type="image/jpeg"
+                />
+
+                <source
+                  srcset="
+                    ../images/studio/section4/laptop-Mikhail_E.jpg    1x,
+                    ../images/studio/section4/laptop-Mikhail_E@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="270"
+                  type="image/jpeg"
+                />
+
+                <img
+                  class="specialist__card"
+                  src="../images/studio/section4/mobile-Mikhail_E.jpg"
+                  alt="Улыбающийся молодой человек с черной бородкой,
                     в очках, в чёрной футболке"
-                width="270"
-                height="260"
-              />
+                />
+              </picture>
+
               <div class="specialist__info">
                 <h3 class="specialist__name">Михаил Ермаков</h3>
                 <p lang="en" class="specialist__profession">UI Designer</p>
@@ -396,10 +545,10 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- Секція 5 -->
-      <!-- <section class="clients">
+      <section class="clients">
         <div class="container">
           <h2 class="clients__title">Постоянные клиенты</h2>
 
@@ -454,10 +603,10 @@
           </ul>
         </div>
       </section>
-    </main> -->
+    </main>
 
     <!--Подвал-->
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container footer__container">
         <div class="footer__box">
           <a href="./index.html" class="logo-footer"
@@ -546,7 +695,7 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
 
     <!-- Модальне вікно -->
     <!-- <div class="backdrop is-hidden" data-modal>
@@ -613,6 +762,6 @@
     </div> -->
 
     <script src="./js/modal.js"></script>
-     <script src="./js/mobile-menu.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
