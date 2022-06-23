@@ -16,42 +16,76 @@
     <!--Шапка-->
     <header class="header">
       <div class="container header__container">
-        <nav class="navigation">
-          <a href="./index.html" class="logo">Web<span class="logo__header">Studio</span></a>
-          <ul class="nav">
-            <li class="nav__item">
-              <a href="./index.html" class="nav__link">Студия</a>
+        <a href="./index.html" class="logo">Web<span class="logo__header">Studio</span></a>
+
+        <button type="button" class="button-menu" aria-expanded="false" data-menu-button>
+          <svg class="buttun-menu__icon" width="40" height="40" aria-label="Кнопка мобильного меню">
+            <use
+              class="button-menu__close"
+              href="./images/icon-svg/symbol-defs.svg#btn-menu-icon-close"
+            ></use>
+            <use
+              class="button-menu__menu"
+              href="./images/icon-svg/symbol-defs.svg#btn-menu-icon"
+            ></use>
+          </svg>
+        </button>
+
+        <div class="menu-container" data-menu>
+          <nav class="navigation">
+            <ul class="nav">
+              <li class="nav__item">
+                <a href="./index.html" class="nav__link">Студия</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="./portfolio.html" class="nav__link nav__link--accent">Портфолио</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="" class="nav__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="feedback">
+            <li class="feedback__item">
+              <a href="mailto:info@devstudio.com" class="feedback__link feedback__link--mail">
+                <svg class="feedback__icon feedback__icon--mail" width="16" height="12">
+                  <use href="./images/icon-svg/symbol-defs.svg#link-envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
             </li>
 
-            <li class="nav__item">
-              <a href="./portfolio.html" class="nav__link nav__link--accent">Портфолио</a>
-            </li>
-
-            <li class="nav__item">
-              <a href="" class="nav__link">Контакты</a>
+            <li class="feedback__item">
+              <a href="tel:+380961111111" class="feedback__link feedback__link--tel">
+                <svg class="feedback__icon feedback__icon--tel" width="10" height="16">
+                  <use href="./images/icon-svg/symbol-defs.svg#link-smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
 
-        <ul class="feedback">
-          <li class="feedback__item">
-            <a href="mailto:info@devstudio.com" class="feedback__link">
-              <svg class="feedback__icon" width="16" height="12">
-                <use href="./images/icon-svg/symbol-defs.svg#link-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
+          <ul class="social-web">
+            <li class="social-web__item">
+              <a href="" class="social-web__link">Instagram</a>
+            </li>
 
-          <li class="feedback__item">
-            <a href="tel:+380961111111" class="feedback__link">
-              <svg class="feedback__icon" width="10" height="16">
-                <use href="./images/icon-svg/symbol-defs.svg#link-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+            <li class="social-web__item">
+              <a href="" class="social-web__link">Twitter</a>
+            </li>
+
+            <li class="social-web__item">
+              <a href="" class="social-web__link">Facebook</a>
+            </li>
+
+            <li class="social-web__item">
+              <a href="" class="social-web__link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -89,20 +123,52 @@
             <li class="grid__item">
               <a class="grid__project" href="">
                 <div class="grid__thumb">
-                  <img
-                    class="grid__card"
-                    src="./images/portfolio/project_1-1.jpg"
-                    alt="На мониторе ноутбука открыта страница сайта"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile-img_1.jpg    1x,
+                        ./images/portfolio/mobile-img_1@2x.jpg 2x
+                      "
+                      media="(max-midth: 480px)"
+                      sizes=""
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet-img_1.jpg    1x,
+                        ./images/portfolio/tablet-img_1@2x.jpg 2x
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes=""
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/laptop-img_1.jpg    1x,
+                        ./images/portfolio/laptop-img_1@2x.jpg 2x
+                      "
+                      media=""
+                      sizes="(max-width: 1200px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      class="grid__card"
+                      src="./images/portfolio/mobile-img_1.jpg"
+                      alt="На мониторе ноутбука открыта страница сайта"
+                      width="100%"
+                    />
+                  </picture>
+
                   <p class="grid__text-transform">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
                     или частном лице.
                   </p>
                 </div>
-                <div class="grid__box">
+                <div class="grid__box grid__box--big">
                   <h2 class="grid__title">Технокряк</h2>
                   <p class="grid__text">Веб-сайт</p>
                 </div>
@@ -112,13 +178,45 @@
             <li class="grid__item">
               <a class="grid__project" href="">
                 <div class="grid__thumb">
-                  <img
-                    class="grid__card"
-                    src="./images/portfolio/project_1-2.jpg"
-                    alt="Два баскетболиста борятся за мяч"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile-img_2.jpg    1x,
+                        ./images/portfolio/mobile-img_2@2x.jpg 2x
+                      "
+                      media="(max-midth: 480px)"
+                      sizes=""
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet-img_2.jpg    1x,
+                        ./images/portfolio/tablet-img_2@2x.jpg 2x
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes=""
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/laptop-img_2.jpg    1x,
+                        ./images/portfolio/laptop-img_2@2x.jpg 2x
+                      "
+                      media=""
+                      sizes="(max-width: 1200px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      class="grid__card"
+                      src="./images/portfolio/mobile-img_2.jpg"
+                      alt="На мониторе ноутбука открыта страница сайта"
+                      width="100%"
+                    />
+                  </picture>
+
                   <p class="grid__text-transform">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -137,13 +235,45 @@
             <li class="grid__item">
               <a class="grid__project" href="">
                 <div class="grid__thumb">
-                  <img
-                    class="grid__card"
-                    src="./images/portfolio/project_1-3.jpg"
-                    alt="Рыба"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile-img_3.jpg    1x,
+                        ./images/portfolio/mobile-img_3@2x.jpg 2x
+                      "
+                      media="(max-midth: 480px)"
+                      sizes=""
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet-img_3.jpg    1x,
+                        ./images/portfolio/tablet-img_3@2x.jpg 2x
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes=""
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/laptop-img_3.jpg    1x,
+                        ./images/portfolio/laptop-img_3@2x.jpg 2x
+                      "
+                      media=""
+                      sizes="(max-width: 1200px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      class="grid__card"
+                      src="./images/portfolio/mobile-img_3.jpg"
+                      alt="На мониторе ноутбука открыта страница сайта"
+                      width="100%"
+                    />
+                  </picture>
+
                   <p class="grid__text-transform">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -160,13 +290,45 @@
             <li class="grid__item">
               <a class="grid__project" href="">
                 <div class="grid__thumb">
-                  <img
-                    class="grid__card"
-                    src="./images/portfolio/project_2-1.jpg"
-                    alt="Наушники"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile-img_4.jpg    1x,
+                        ./images/portfolio/mobile-img_4@2x.jpg 2x
+                      "
+                      media="(max-midth: 480px)"
+                      sizes=""
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet-img_4.jpg    1x,
+                        ./images/portfolio/tablet-img_4@2x.jpg 2x
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes=""
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/laptop-img_4.jpg    1x,
+                        ./images/portfolio/laptop-img_4@2x.jpg 2x
+                      "
+                      media=""
+                      sizes="(max-width: 1200px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      class="grid__card"
+                      src="./images/portfolio/mobile-img_4.jpg"
+                      alt="На мониторе ноутбука открыта страница сайта"
+                      width="100%"
+                    />
+                  </picture>
+
                   <p class="grid__text-transform">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -183,13 +345,45 @@
             <li class="grid__item">
               <a class="grid__project" href="">
                 <div class="grid__thumb">
-                  <img
-                    class="grid__card"
-                    src="./images/portfolio/project_2-2.jpg"
-                    alt="Две коробки: белая и коричневая"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile-img_5.jpg    1x,
+                        ./images/portfolio/mobile-img_5@2x.jpg 2x
+                      "
+                      media="(max-midth: 480px)"
+                      sizes=""
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet-img_5.jpg    1x,
+                        ./images/portfolio/tablet-img_5@2x.jpg 2x
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes=""
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/laptop-img_5.jpg    1x,
+                        ./images/portfolio/laptop-img_5@2x.jpg 2x
+                      "
+                      media=""
+                      sizes="(max-width: 1200px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      class="grid__card"
+                      src="./images/portfolio/mobile-img_5.jpg"
+                      alt="На мониторе ноутбука открыта страница сайта"
+                      width="100%"
+                    />
+                  </picture>
+
                   <p class="grid__text-transform">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -206,13 +400,45 @@
             <li class="grid__item">
               <a class="grid__project" href="">
                 <div class="grid__thumb">
-                  <img
-                    class="grid__card"
-                    src="./images/portfolio/project_2-3.jpg"
-                    alt="На мониторе копьютера открыта страница сайта"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile-img_6.jpg    1x,
+                        ./images/portfolio/mobile-img_6@2x.jpg 2x
+                      "
+                      media="(max-midth: 480px)"
+                      sizes=""
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet-img_6.jpg    1x,
+                        ./images/portfolio/tablet-img_6@2x.jpg 2x
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes=""
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/laptop-img_6.jpg    1x,
+                        ./images/portfolio/laptop-img_6@2x.jpg 2x
+                      "
+                      media=""
+                      sizes="(max-width: 1200px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      class="grid__card"
+                      src="./images/portfolio/mobile-img_6.jpg"
+                      alt="На мониторе ноутбука открыта страница сайта"
+                      width="100%"
+                    />
+                  </picture>
+
                   <p class="grid__text-transform">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -229,13 +455,45 @@
             <li class="grid__item">
               <a class="grid__project" href="">
                 <div class="grid__thumb">
-                  <img
-                    class="grid__card"
-                    src="./images/portfolio/project_3-1.jpg"
-                    alt="Раскрытый журнал"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile-img_7.jpg    1x,
+                        ./images/portfolio/mobile-img_7@2x.jpg 2x
+                      "
+                      media="(max-midth: 480px)"
+                      sizes=""
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet-img_7.jpg    1x,
+                        ./images/portfolio/tablet-img_7@2x.jpg 2x
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes=""
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/laptop-img_7.jpg    1x,
+                        ./images/portfolio/laptop-img_7@2x.jpg 2x
+                      "
+                      media=""
+                      sizes="(max-width: 1200px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      class="grid__card"
+                      src="./images/portfolio/mobile-img_7.jpg"
+                      alt="На мониторе ноутбука открыта страница сайта"
+                      width="100%"
+                    />
+                  </picture>
+
                   <p class="grid__text-transform">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -252,13 +510,45 @@
             <li class="grid__item">
               <a class="grid__project" href="">
                 <div class="grid__thumb">
-                  <img
-                    class="grid__card"
-                    src="./images/portfolio/project_3-2.jpg"
-                    alt="Бирка с текстом"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile-img_8.jpg    1x,
+                        ./images/portfolio/mobile-img_8@2x.jpg 2x
+                      "
+                      media="(max-midth: 480px)"
+                      sizes=""
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet-img_8.jpg    1x,
+                        ./images/portfolio/tablet-img_8@2x.jpg 2x
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes=""
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/laptop-img_8.jpg    1x,
+                        ./images/portfolio/laptop-img_8@2x.jpg 2x
+                      "
+                      media=""
+                      sizes="(max-width: 1200px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      class="grid__card"
+                      src="./images/portfolio/mobile-img_8.jpg"
+                      alt="На мониторе ноутбука открыта страница сайта"
+                      width="100%"
+                    />
+                  </picture>
+
                   <p class="grid__text-transform">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -275,14 +565,45 @@
             <li class="grid__item">
               <a class="grid__project" href="">
                 <div class="grid__thumb">
-                  <img
-                    class="grid__card"
-                    src="./images/portfolio/project_3-3.jpg"
-                    alt="Раскрытый ноутбук
-                     с руками лежащими на клавиатуре"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile-img_9.jpg    1x,
+                        ./images/portfolio/mobile-img_9@2x.jpg 2x
+                      "
+                      media="(max-midth: 480px)"
+                      sizes=""
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet-img_9.jpg    1x,
+                        ./images/portfolio/tablet-img_9@2x.jpg 2x
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes=""
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/laptop-img_9.jpg    1x,
+                        ./images/portfolio/laptop-img_9@2x.jpg 2x
+                      "
+                      media=""
+                      sizes="(max-width: 1200px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      class="grid__card"
+                      src="./images/portfolio/mobile-img_9.jpg"
+                      alt="На мониторе ноутбука открыта страница сайта"
+                      width="100%"
+                    />
+                  </picture>
+
                   <p class="grid__text-transform">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -303,68 +624,70 @@
     <!--Подвал-->
     <footer class="footer">
       <div class="container footer__container">
-        <div class="footer__box">
-          <a href="./index.html" class="logo-footer"
-            >Web<span class="logo-footer__color">Studio</span></a
-          >
-          <address class="address">
-            <ul class="address__list">
-              <li class="address__item">
-                <a
-                  class="address__link address__link--color"
-                  href="https://goo.gl/maps/urmdaWCt248vLgHYA"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  г. Киев, пр-т Леси Украинки, 26</a
-                >
+        <div class="footer__block">
+          <div class="footer__box">
+            <a href="./index.html" class="logo-footer"
+              >Web<span class="logo-footer__color">Studio</span></a
+            >
+            <address class="address">
+              <ul class="address__list">
+                <li class="address__item">
+                  <a
+                    class="address__link address__link--color"
+                    href="https://goo.gl/maps/urmdaWCt248vLgHYA"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    г. Киев, пр-т Леси Украинки, 26</a
+                  >
+                </li>
+                <li class="address__item">
+                  <a class="address__link" href="mailto:info@example.com">info@example.com</a>
+                </li>
+                <li class="address__item">
+                  <a class="address__link" href="tel:+380991111111">+38 099 111 11 11</a>
+                </li>
+              </ul>
+            </address>
+          </div>
+
+          <div class="footer__box-link">
+            <p class="footer__title-link">присоединяйтесь</p>
+
+            <ul class="soc-link">
+              <li class="soc-link__item">
+                <a class="soc-link__link" href="">
+                  <svg class="soc-link__icon" width="20" height="20">
+                    <use href="./images/icon-svg/symbol-defs.svg#c-l-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address__item">
-                <a class="address__link" href="mailto:info@example.com">info@example.com</a>
+
+              <li class="soc-link__item">
+                <a class="soc-link__link" href="">
+                  <svg class="soc-link__icon" width="20" height="20">
+                    <use href="./images/icon-svg/symbol-defs.svg#c-l-twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address__item">
-                <a class="address__link" href="tel:+380991111111">+38 099 111 11 11</a>
+
+              <li class="soc-link__item">
+                <a class="soc-link__link" href="">
+                  <svg class="soc-link__icon" width="20" height="20">
+                    <use href="./images/icon-svg/symbol-defs.svg#c-l-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="soc-link__item">
+                <a class="soc-link__link" href="">
+                  <svg class="soc-link__icon" width="20" height="20">
+                    <use href="./images/icon-svg/symbol-defs.svg#c-l-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-
-        <div class="footer__box-link">
-          <p class="footer__title-link">присоединяйтесь</p>
-
-          <ul class="soc-link">
-            <li class="soc-link__item">
-              <a class="soc-link__link" href="">
-                <svg class="soc-link__icon" width="20" height="20">
-                  <use href="./images/icon-svg/symbol-defs.svg#c-l-instagram"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="soc-link__item">
-              <a class="soc-link__link" href="">
-                <svg class="soc-link__icon" width="20" height="20">
-                  <use href="./images/icon-svg/symbol-defs.svg#c-l-twitter"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="soc-link__item">
-              <a class="soc-link__link" href="">
-                <svg class="soc-link__icon" width="20" height="20">
-                  <use href="./images/icon-svg/symbol-defs.svg#c-l-facebook"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="soc-link__item">
-              <a class="soc-link__link" href="">
-                <svg class="soc-link__icon" width="20" height="20">
-                  <use href="./images/icon-svg/symbol-defs.svg#c-l-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
 
         <div class="footer__box-mailing">
@@ -391,5 +714,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

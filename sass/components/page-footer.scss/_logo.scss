@@ -4,6 +4,15 @@
   display: block;
   margin-bottom: 20px;
 
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
+
   &__color {
     color: $wite-text-color;
   }

@@ -1,5 +1,15 @@
 .footer__box-link {
-  margin-right: 93px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 105px;
+  }
+}
+
+.footer__box-link {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .footer__title-link {
@@ -12,6 +22,10 @@
   text-transform: uppercase;
 
   color: $wite-text-color;
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
 }
 
 .soc-link {

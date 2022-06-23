@@ -1,5 +1,18 @@
 .footer__box {
-  margin-right: 70px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-left: 76px;
+    margin-right: 165px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+  }
+}
+
+.footer__box-link {
+  @media screen and (max-width: 480px) {
+    margin-bottom: 60px;
+  }
 }
 
 .address {
@@ -19,5 +32,12 @@
 
   .address__link--color {
     color: $wite-text-color;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding-bottom: 60px;
+  }
+  @media screen and (max-width: 768px) {
+    text-align: center;
   }
 }
