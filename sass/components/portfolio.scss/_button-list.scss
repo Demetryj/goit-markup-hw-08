@@ -1,12 +1,10 @@
 .button-list {
   display: flex;
 
-  @media screen and (max-width: 480px) {
-    flex-wrap: wrap;
+  flex-wrap: wrap;
 
-    &__item:nth-child(-n + 3) {
-      margin-bottom: 15px;
-    }
+  &__item:nth-child(-n + 3) {
+    margin-bottom: 15px;
   }
 
   @media screen and (min-width: 768px) {
