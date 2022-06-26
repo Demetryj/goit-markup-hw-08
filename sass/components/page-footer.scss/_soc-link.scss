@@ -1,10 +1,4 @@
 .footer__box-link {
-  @media screen and (min-width: 1200px) {
-    margin-right: 105px;
-  }
-}
-
-.footer__box-link {
   @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
