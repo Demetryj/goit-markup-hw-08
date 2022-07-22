@@ -967,6 +967,9 @@ body {
         flex-basis: calc(25% - 30px);
   }
 }
+.specialist__card {
+  max-width: 100%;
+}
 .specialist__name {
   margin-bottom: 10px;
   font-weight: 500;
